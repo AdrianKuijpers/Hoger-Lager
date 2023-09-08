@@ -15,16 +15,33 @@ let uitkomsten = {
     }
   }
   
-  function ToonUitkomst() {
-    let winnaar = "";
-  
+  function Hogerer() {
+    let hoger = "";
+ 
+
     if (uitkomsten.speler1 > uitkomsten.speler2) {
-        winnaar = "Speler 1 heeft gewonnen!";
+        hoger = "Speler 1 heeft gewonnen!";
     } else if (uitkomsten.speler1 < uitkomsten.speler2) {
-        winnaar = "Speler 2 heeft gewonnen!";
+        hoger = "Speler 2 heeft gewonnen!";
     } else {
-        winnaar = "Het is gelijkspel!";
+        hoger = "Het is gelijkspel!";
     }
   
-    document.getElementById("winnaar").innerHTML = winnaar;
+    document.getElementById("lager").innerHTML = hoger;
+
+}   
+
+function Laagerer() {
+  let lager = "";
+
+  if (uitkomsten.speler1 < uitkomsten.speler2) {
+   lager = "Speler 1 heeft gewonnen!";
+  } else if (uitkomsten.speler1 > uitkomsten.speler2) {
+      lager = "Speler 2 heeft gewonnen!";
+  } else {
+      lager = "Het is gelijkspel!";
   }
+
+  document.getElementById("lager").innerHTML = lager;
+
+}
